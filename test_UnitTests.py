@@ -1,4 +1,3 @@
-
 import pytest
 import numpy as np
 import pandas as pd
@@ -34,3 +33,17 @@ def test_Forecast_nPeriod():
     assert np.isclose(states1[0][0], 35)
     assert np.isclose(states2[0][0], 42.5)
     assert np.isclose(states3[0][0], 46.25)
+
+import getReturns_File
+def test_getReturns():
+    x = np.array([180, 150, 120, 90])
+    rets1 = getReturns(x, 1)
+    rets2 = getReturns(x, 2)
+    rets3 = getReturns(x, 3)
+    assert np.isclose(round(rets1[0], 2), 0.20)
+    assert np.isclose(round(rets1[1], 2), 0.25)
+    assert np.isclose(round(rets1[2], 2), 0.33)
+    assert np.isclose(round(rets2[0], 2), 0.50)
+    assert np.isclose(round(rets3[0], 2), 1.00)
+
+test_Forecast_nPeriod()
