@@ -4,6 +4,10 @@ import pandas as pd
 import statsmodels.formula.api as smf
 import sklearn
 
+import WhoAmI_File
+def test_WhoAmI():
+    assert WhoAmI_File.WhoAmI() != ''
+
 import MyLM_File
 def test_MyLM():
     data = sklearn.datasets.load_iris()
