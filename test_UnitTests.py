@@ -49,5 +49,3 @@ def test_getReturns():
     assert np.isclose(round(rets1[2], 2), 0.33)
     assert np.isclose(round(rets2[0], 2), 0.50)
     assert np.isclose(round(rets3[0], 2), 1.00)
-
-test_Forecast_nPeriod()
